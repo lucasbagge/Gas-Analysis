@@ -1,0 +1,42 @@
+---
+title: "Capstone Projects"
+format: html
+editor: visual
+---
+
+## Quarto
+
+## Ask
+
+Five questions will guide your case study:
+1. What type of company does your client represent, and what are they asking you to accomplish?
+  * A Natural Gas fim that want to look into the future to find out the
+    volatility of the market and energy crisis.
+2. What are the key factors involved in the business task you are investigating?
+  * Future income, retention of customer and risk assesment.
+3. What type of data will be appropriate for your analysis?
+  * Finanical data regarding Gas prices, Spot data, Wheater data and
+    volume dta.
+4. Where will you obtain that data?
+  * It is diffuclt and something I am looking into.
+5. Who is your audience, and what materials will help you present to them e   
+  * 
+  
+  
+You will produce a report with the following deliverables:
+A clear statement of the business task you have selected to investigate
+2. A description of all data sources used
+3. Documentation of any cleaning or manipulation of data
+4. A summary of your analysis
+5. Supporting visualizations and key findings
+6. Based on what you discover, a list of additional deliverables you think would be helpful to include for further exploration
+Your top high-level insights based on your analysis
+
+
+## Spot market
+
+The spot market is where financial instruments, such as commodities, currencies, and securities, are traded for immediate delivery. Delivery is the exchange of cash for the financial instrument
+
+## Future market
+
+A futures contract is a legal agreement to buy or sell a particular commodity asset, or security at a predetermined price at a specified time in the future.
