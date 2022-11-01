@@ -1,26 +1,44 @@
 ---
-title: "Capstone Projects"
-format: html
-editor: visual
+title: "Capstone Project for Google Data Analyst Certificate"
+author: Lucas Bagge
+date: '2022-11-01'
+format: 
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
 ---
+
+```{r setup}
+#| include: false
+library(knitr)
+knitr::opts_chunk$set(cache = TRUE,
+                      cache.lazy = FALSE, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      echo = TRUE,
+                      dpi = 180,
+                      fig.width = 7,
+                      fig.height = 5)
+library(tidyverse)
+library(ggplot2)
+library(tidymodels)
+library(brms)
+theme_set(theme_minimal())
+update_geom_defaults("rect", list(fill = "midnightblue", alpha = 0.8))
+update_geom_defaults("line", list(color = "midnightblue", alpha = 0.8))
+renv::snapshot()
+```
 
 # Intro 
 
 Five questions will guide your case study:
 
 1. What type of company does your client represent, and what are they asking you to accomplish?
-  * A Natural Gas fim that want to look into the future to find out the
-    volatility of the market and energy crisis.
 2. What are the key factors involved in the business task you are investigating?
-  * Future income, retention of customer and risk assesment.
 3. What type of data will be appropriate for your analysis?
-  * Finanical data regarding Gas prices, Spot data, Wheater data and
-    volume dta.
 4. Where will you obtain that data?
-  * It is diffuclt and something I am looking into.
 5. Who is your audience, and what materials will help you present to them e   
-  * 
-  
   
 You will produce a report with the following deliverables:
 
@@ -32,6 +50,7 @@ You will produce a report with the following deliverables:
 6. Based on what you discover, a list of additional deliverables you think would be helpful to include for further exploration
 Your top high-level insights based on your analysis
 
+# Energi Market
 
 ## Spot market
 
@@ -59,18 +78,197 @@ Key tasks
 3. Choose a dataset
 4. Establish metrics
 
+Deliverable
+
+* A clear statement of the business task you have selected to investigate
+
+The world is not what it has use to be. There is war in Europe with inflation and energi
+prises sky rocking. When looking at how the spiking enrgi prices has done to Denmark it
+has intruced fear in the people. Fear of not being able to pay the bills and not have money or
+energy ressources to heat up their house. But for the last month we have seen a decrease in
+natural gas prices and they haven fallen 70% from the top.
+
+Why is this happening? Is there something in the data that can help us understand this trend?
+
+This problem is important for every business to give a small bage insight in the rising prices
+and the other way around way prices is falling. The analysis can also be used for The Goverment
+to give them insight to make strategin decision regarding EU and Russian. 
+
+
+# Prepare
+
+Guiding questions
+
+* Where is your data located?
+* How is the data organized?
+* Are there issues with bias or credibility in this data? Does your data ROCCC?
+* How are you addressing licensing, privacy, security, and accessibility?
+* How did you verify the data’s integrity?
+* How does it help you answer your question?
+* Are there any problems with the data?
+
+Key
+
+* Download data and store it appropriately.
+* Identify how it’s organized.
+* Sort and filter the data.
+* Determine the credibility of the data.
+
+Deliverable
+
+* A description of all data sources used
+
+# Process
+
+Guiding questions
+
+* What tools are you choosing and why?
+* Have you ensured your data’s integrity?
+* What steps have you taken to ensure that your data is clean?
+* How can you verify that your data is clean and ready to analyze?
+* Have you documented your cleaning process so you can review and share those results?
+
+Key tasks
+
+* Check the data for errors.
+* Choose your tools.
+* Transform the data so you can work with it e
+
+Deliverable
+Documentation of any cleaning or manipulation of data
+
+Follow these steps:
+
+1. Download the dataset.
+2. Create a folder on your desktop or Drive to house the files. Use appropriate file-naming 3. conventions. Create subfolders for .CSV or .XLS files.
+4. Follow these instructions for either Excel (a) or Google Sheets (b):
+a. Launch Excel, open your file, and choose to Save As an Excel Workbook file. Put it in the subfolder you created for .XLS files.
+b. Open each .CSV file in Google Sheets and save it to the appropriate
+5. subfolder. Open your spreadsheet and appropriately label the columns. 6. Proceed to the analyze step.
+
+# Analyze
+
+Guiding questions
+
+* How should you organize your data to perform analysis on it?
+* Has your data been properly formatted?
+* What surprises did you discover in the data?
+* What trends or relationships did you find in the data?
+* How will these insights help answer your business questions?
+
+Key tasks
+
+* Aggregate your data so it’s useful and accessible.
+* Organize and format your data.
+* Perform calculations.
+* Document your calculations to keep track of your analysis steps.
+* Identify trends and relationships.
+
+Deliverable
+
+* A summary of your analysis
+
+# Share
+
+Guiding questions
+
+* Were you able to answer the business question?
+* What story does your data tell?
+* How do your findings relate to your original question?
+* Who is your audience? What is the best way to communicate with them?
+* Can data visualization help you share your findings?
+* Is your presentation accessible to your audience?
+
+Key tasks
+
+* Determine the best way to share your findings.
+* Create effective data visualization
+* Present your findings.
+* Ensure your work is accessible.
+
+Deliverable
+
+* Supporting visualizations and key findings
+
+Follow these steps:
+
+1. Take out a piece of paper and a pen and sketch some ideas for how you will visualize the data.
+2. Once you choose a visual form, open your tool of choice to create your visualization. Use a presentation software, such
+as PowerPoint or Google Slides; your spreadsheet program; Tableau; or R.
+3. Create your data visualization, remembering that contrast should be used to draw your audience’s attention to the most
+important insights. Use artistic principles including size, color, and shape.
+4. Ensure clear meaning through the proper use of common elements, such as headlines, subtitles, and labels.
+5. Refine your data visualization by applying deep attention to detail.
+
+# Act
+
+
+Guiding questions
+
+* What is your final conclusion based on your analysis?
+* How could your team and business apply your insights?
+* What next steps would you or your stakeholders take based on your findings?
+* Is there additional data you could use to expand on your findings?
+
+Key tasks
+
+* Create your portfolio.
+* Add your case study.
+* Practice presenting your case study to a friend or family member.
+
+Deliverable
+
+* Your top high-level insights based on your analysis
+* Based on what you discover, a list of additional deliverables you think would be helpful to include for further exploration
+
+# Appendix
+
+## Using R enviroment `renv`
+
+Packages alway changes so it is important to make sure that the package
+you used in a start is lock on some version. 
+
+Another benefit is for other can easy use the same packge you just have used.
+
+For this we use the package `renv`. The first we nned to use initalise,
+where we see what pakcge we use and looks into the files with code where
+we have used library. It creates the dependency used for a given projects.
+
+```
+renv::init()
+```
+
+Take a and lock the package version with this function. 
+
 ```{r}
-library(httr)y
+renv::snapshot()
+```
 
-output <- get("https://agsi.gie.eu/api?type=eu")
+We can restore to the old packages version with `renv::``
 
+With `.libPaths` we can see that for the projects we are using the packages in the
+enviroment of renv. If we are outside of the enviroment then we wil take from the default.
+
+See [renv documentation](https://rstudio.github.io/renv/articles/renv.html)
+
+```{r}
+library(dplyr)
 ```
 
 
-# Data
+
+
+
+## Data
 
 For Natural_Gas_Futures_Contract_1_Daily.csv bruges siden:
 
 * https://www.eia.gov/opendata/v1/qb.php?category=462457&sdid=NG.RNGC1.D 
 
-For 
+For storage
+
+* [Stoage](https://agsi.gie.eu/data-overview/EU)
+
+For Dutch TTF Natural Gas Futures Historical Data
+* [TTF](https://www.investing.com/commodities/dutch-ttf-gas-c1-futures-historical-data)
+
