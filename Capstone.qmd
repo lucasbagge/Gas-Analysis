@@ -4,11 +4,10 @@ format: html
 editor: visual
 ---
 
-## Quarto
-
-## Ask
+# Intro 
 
 Five questions will guide your case study:
+
 1. What type of company does your client represent, and what are they asking you to accomplish?
   * A Natural Gas fim that want to look into the future to find out the
     volatility of the market and energy crisis.
@@ -24,7 +23,8 @@ Five questions will guide your case study:
   
   
 You will produce a report with the following deliverables:
-A clear statement of the business task you have selected to investigate
+
+1. A clear statement of the business task you have selected to investigate
 2. A description of all data sources used
 3. Documentation of any cleaning or manipulation of data
 4. A summary of your analysis
@@ -40,3 +40,37 @@ The spot market is where financial instruments, such as commodities, currencies,
 ## Future market
 
 A futures contract is a legal agreement to buy or sell a particular commodity asset, or security at a predetermined price at a specified time in the future.
+
+# Ask
+
+Guiding questions
+
+* What topic are you exploring?
+* What is the problem you are trying to solve?
+* What metrics will you use to measure your data to achieve your objective?
+* Who are the stakeholders?
+* Who is your audience?
+* How can your insights help your client make decisions?
+
+Key tasks
+
+1. Identify the business task
+2. Determine key stakeholders
+3. Choose a dataset
+4. Establish metrics
+
+```{r}
+library(httr)y
+
+output <- get("https://agsi.gie.eu/api?type=eu")
+
+```
+
+
+# Data
+
+For Natural_Gas_Futures_Contract_1_Daily.csv bruges siden:
+
+* https://www.eia.gov/opendata/v1/qb.php?category=462457&sdid=NG.RNGC1.D 
+
+For 
