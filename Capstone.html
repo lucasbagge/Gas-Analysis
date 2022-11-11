@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lucas Bagge">
+<meta name="dcterms.date" content="2022-11-01">
 
-<title>Capstone Projects</title>
+<title>Capstone Project Data Analyst</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -15,6 +17,69 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -40,63 +105,295 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Capstone Projects</h1>
+<h1 class="title">Capstone Project Data Analyst</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Lucas Bagge </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 1, 2022</p>
+    </div>
+  </div>
     
   </div>
   
 
 </header>
 
-<section id="intro" class="level1">
-<h1>Intro</h1>
-<p>Five questions will guide your case study:</p>
-<ol type="1">
-<li>What type of company does your client represent, and what are they asking you to accomplish?</li>
-</ol>
+<div class="cell" data-hash="Capstone_cache/html/my theme_403c5bd87fffb4c0f6cd183f521e99b1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>theme_ben <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">base_size =</span> <span class="dv">14</span>) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> base_size) <span class="sc">%+replace%</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="co"># L'ensemble de la figure</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fu">rel</span>(<span class="dv">1</span>), <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">margin =</span> <span class="fu">margin</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">0</span>), <span class="at">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Zone où se situe le graphique</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">panel.border =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Les axes</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">0.85</span>), <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">0.70</span>), <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.3</span>, <span class="st">"lines"</span>), <span class="at">type =</span> <span class="st">"closed"</span>)),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      <span class="co"># La légende</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">0.85</span>), <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">0.70</span>), <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend.key =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"transparent"</span>, <span class="at">colour =</span> <span class="cn">NA</span>),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend.key.size =</span> <span class="fu">unit</span>(<span class="fl">1.5</span>, <span class="st">"lines"</span>),</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"transparent"</span>, <span class="at">colour =</span> <span class="cn">NA</span>),</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Les étiquettes dans le cas d'un facetting</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>      <span class="at">strip.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#17252D"</span>, <span class="at">color =</span> <span class="st">"#17252D"</span>),</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">0.85</span>), <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">margin =</span> <span class="fu">margin</span>(<span class="dv">5</span>,<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">0</span>))</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="problem" class="level1">
+<h1>Problem</h1>
+<p>We have the last year seen a spike and Natural Gas prices for EU (TTF) and with a enormous volatility. It has left several industrices that use gas for heating and manufacturing gone out of business because they cannot pay their bills and it has the same effect on the indicidual households.</p>
+<p>For many decision maker it is important to know why this is happening so they can make better decision on who they coorporate with. So for this analysis I would like to look into the reason why we are seeing this increase so a Politican can come up we ideas to where we can change our energy ressources.</p>
+</section>
+<section id="data" class="level1">
+<h1>Data</h1>
+<p>The data is collected from professionel in the trader field so it is in mu opinon relaiable. We can extract the dta from multiple places but with a fee. I have focus on the free sources which can be bad so it is not original. Therefore the data is not comprehensive beacuse you can get better institution where the data given can be questions.</p>
+</section>
+<section id="process" class="level1">
+<h1>Process</h1>
+<p>I am going to use <code>R</code> for the cleaning. Beacuse it is not so far a very complicated data I have only transformed the date column to a <code>date class</code>. While importing the data it started out being a <code>character</code>.</p>
+<p>Data is from a respect side for making analysis of the trzder market. The could be a problem with the intrigity of the data, but if that was the case the whole side would be seen as unreilable. Therefore it would be a bad business if they did not secure the data and check if the data is correct.</p>
+<p>Because of the volatility of the Gas prices I will make a log transformation of the data to remove some of the variance. It is a better way of removeing some of the variance so it is easier to remove some outlier for a time series data.</p>
+<p>I include two new features; <code>year</code> and <code>month</code> that help us investigate if the diffrece in the prices can be seen in the some period.</p>
+</section>
+<section id="analyze" class="level1">
+<h1>Analyze</h1>
 <ul>
-<li>A Natural Gas fim that want to look into the future to find out the volatility of the market and energy crisis.</li>
-</ul>
-<ol start="2" type="1">
-<li>What are the key factors involved in the business task you are investigating?</li>
-</ol>
-<ul>
-<li>Future income, retention of customer and risk assesment.</li>
-</ul>
-<ol start="3" type="1">
-<li>What type of data will be appropriate for your analysis?</li>
-</ol>
-<ul>
-<li>Finanical data regarding Gas prices, Spot data, Wheater data and volume dta.</li>
-</ul>
-<ol start="4" type="1">
-<li>Where will you obtain that data?</li>
-</ol>
-<ul>
-<li>It is diffuclt and something I am looking into.</li>
-</ul>
-<ol start="5" type="1">
-<li>Who is your audience, and what materials will help you present to them e<br>
-</li>
-</ol>
-<ul>
-<li></li>
-</ul>
-<p>You will produce a report with the following deliverables:</p>
-<ol type="1">
-<li>A clear statement of the business task you have selected to investigate</li>
-<li>A description of all data sources used</li>
-<li>Documentation of any cleaning or manipulation of data</li>
 <li>A summary of your analysis</li>
-<li>Supporting visualizations and key findings</li>
-<li>Based on what you discover, a list of additional deliverables you think would be helpful to include for further exploration Your top high-level insights based on your analysis</li>
-</ol>
+</ul>
+<div class="cell" data-hash="Capstone_cache/html/load data_0ed03a9596e2294c5c698bf544ef9fd0">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ttf <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'data/Dutch TTF Natural Gas Futures Historical Data.csv'</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>()  <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(date, price)  <span class="sc">%&gt;%</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span> <span class="fu">as.Date</span>(date, <span class="st">"%m/%d/%Y"</span>) )</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>ttf_by_date <span class="ot">&lt;-</span> ttf <span class="sc">%&gt;%</span>  </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_by_time</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">.date_var =</span> date,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">.by =</span> <span class="st">'day'</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">value =</span> <span class="fu">sum</span>(price)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as_factor</span>(lubridate<span class="sc">::</span><span class="fu">year</span>(date))) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>The Gas prices has over the last year seen a rising trend and there is several events that has contributed to this as in seen the graph:</p>
+<div class="cell" data-hash="Capstone_cache/html/unnamed-chunk-1_22872737bf06973bacd652deb4f68cdf">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>arrows <span class="ot">&lt;-</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x1 =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"2022-04-01"</span>)),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">x2 =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"2022-06-01"</span>)),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">y1 =</span> <span class="fu">c</span>(<span class="dv">300</span>), </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y2 =</span> <span class="fu">c</span>(<span class="dv">290</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>ttf_by_date <span class="sc">%&gt;%</span> </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">&gt;=</span> <span class="st">'2021-01-01'</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value), </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">colour =</span> <span class="st">'#66a182'</span>, </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">"%b-%y"</span>, <span class="at">date_breaks =</span> <span class="st">'4 month'</span>) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"&lt;span style='font-size:15pt'&gt;&lt;b&gt;TTF price developemt &lt;/b&gt; &lt;br /&gt;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;span style='font-size:11pt'&gt;Historical explanation on the trend and event&lt;/span&gt;"</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">""</span>, </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Euro/MWh"</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"&lt;b&gt;Source&lt;/b&gt;: *investment.com*"</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_markdown</span>(<span class="at">lineheight =</span> <span class="fl">1.1</span>),</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family=</span><span class="st">"Comic Sans MS"</span>),</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"rect"</span>, </span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>           <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">"2022-06-13"</span>), </span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>           <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">"2022-08-27"</span>),</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>           <span class="at">ymin =</span> <span class="dv">0</span>,</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>           <span class="at">ymax =</span> <span class="dv">368</span>,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="st">"red"</span>,</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>           <span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"richtext"</span>,</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>           <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">"2022-02-10"</span>),</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> <span class="dv">310</span>, </span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="st">"&lt;span style='font-family:Times New Roman'&gt;&lt;b&gt;Nord Stream&lt;/b&gt; supply cuts and&lt;br /&gt; </span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="st">           Structural Uncertainty &lt;span&gt;"</span>, </span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="cn">NA</span>,</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>           <span class="at">label.color =</span> <span class="cn">NA</span>,</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>           <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_curve</span>(</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> arrows, <span class="fu">aes</span>(<span class="at">x =</span> x1, <span class="at">y =</span> y1, <span class="at">xend =</span> x2, <span class="at">yend =</span> y2),</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.08</span>, <span class="st">"inch"</span>)), <span class="at">size =</span> <span class="fl">0.5</span>,</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"gray20"</span>, <span class="at">curvature =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"richtext"</span>,</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>           <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">"2021-12-10"</span>),</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> <span class="dv">250</span>, </span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> </span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>             <span class="st">"&lt;p&gt;&lt;span style&gt; &lt;span style&gt; &lt;b&gt;Russia&lt;/b&gt; threatens &lt;br/&gt;Nord Stream supply cuts &lt;span&gt; &lt;/p&gt;"</span>, </span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="cn">NA</span>,</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>           <span class="at">label.color =</span> <span class="cn">NA</span>,</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>           <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    <span class="at">geom =</span> <span class="st">"segment"</span>,</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">'2022-03-07'</span>), </span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="dv">227</span>,</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>    <span class="at">xend =</span> <span class="fu">as.Date</span>(<span class="st">'2022-02-10'</span>), </span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>    <span class="at">yend =</span> <span class="dv">237</span></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"richtext"</span>,</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>           <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">"2021-12-20"</span>),</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> <span class="dv">210</span>, </span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> </span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>             <span class="st">"&lt;p&gt;&lt;span style&gt; &lt;span style&gt; &lt;b&gt;Russia&lt;/b&gt; &lt;br/&gt; invades Ukraine  &lt;span&gt; &lt;/p&gt;"</span>, </span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="cn">NA</span>,</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>           <span class="at">label.color =</span> <span class="cn">NA</span>,</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>           <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>    <span class="at">geom =</span> <span class="st">"segment"</span>,</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">'2022-02-24'</span>), </span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="dv">134</span>,</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>    <span class="at">xend =</span> <span class="fu">as.Date</span>(<span class="st">'2022-01-10'</span>), </span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>    <span class="at">yend =</span> <span class="dv">199</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"richtext"</span>,</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>           <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">"2021-08-15"</span>),</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> <span class="dv">210</span>, </span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> </span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>             <span class="st">"&lt;p&gt;&lt;span style&gt; &lt;span style&gt; &lt;b&gt;YAMAL&lt;/b&gt; is reversed  &lt;span&gt; &lt;/p&gt;"</span>, </span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>           <span class="at">fill =</span> <span class="cn">NA</span>,</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>           <span class="at">label.color =</span> <span class="cn">NA</span>,</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>           <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>    <span class="at">geom =</span> <span class="st">"segment"</span>,</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">'2021-12-21'</span>), </span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="dv">180</span>,</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>    <span class="at">xend =</span> <span class="fu">as.Date</span>(<span class="st">"2021-11-20"</span>), </span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>    <span class="at">yend =</span> <span class="dv">210</span></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Capstone_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="1260"></p>
+</div>
+</div>
+<ul>
+<li><strong>YAMAL Event</strong>: The Yamal–Europe natural gas pipeline is a pipeline connecting Russian natural gas fields in the Yamal Peninsula and Western Siberia with Poland and Germany, through Belarus. In this period since Dec.&nbsp;21, the link between Poland and Germany had been operating in reverse mode, carrying gas from west to east and putting upward pressure on European gas prices.</li>
+<li><strong>Russia invades Ukraine</strong>: TTF price made huge gains in early trade Feb.&nbsp;24 after Ukraine said Russia had launched a full-scale invasion of the country. The raise was because of the markets concern over potential disruption to Russian gas deliveries to Europe amid low storage stocks.</li>
+<li><strong>Russias thread</strong>: Russia threatened to cut natural gas supplies to Europe via the Nord Stream 1 pipeline as part of its response to sanctions imposed over the invasion of Ukraine, a move that could heighten the turmoil in energy markets and drive consumer prices even higher.</li>
+<li><strong>Nord Stream cuts</strong>: Russia annoce that Nord Stream 1 would stay shut indefinitely, stoking renewed fears about shortages and gas rationing in the European Union this winter.</li>
+</ul>
+<p>After this event we have seen a decline in the prices. This is for further investigation.</p>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>EU has over the years relied heavely on Russia delivering gas. After the invading and conflict EU has had no alternativ to Russia. Therefore it is of most importance to find other ressources to either get the Gas or alternatives energy ressources.</p>
+</section>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+<section id="using-r-enviroment-renv" class="level2">
+<h2 class="anchored" data-anchor-id="using-r-enviroment-renv">Using R enviroment <code>renv</code></h2>
+<p>Packages alway changes so it is important to make sure that the package you used in a start is lock on some version.</p>
+<p>Another benefit is for other can easy use the same packge you just have used.</p>
+<p>For this we use the package <code>renv</code>. The first we nned to use initalise, where we see what pakcge we use and looks into the files with code where we have used library. It creates the dependency used for a given projects.</p>
+<pre><code>renv::init()</code></pre>
+<p>Take a and lock the package version with this function.</p>
+<pre><code>renv::snapshot()</code></pre>
+<p>We can restore to the old packages version with `renv::``</p>
+<p>With <code>.libPaths</code> we can see that for the projects we are using the packages in the enviroment of renv. If we are outside of the enviroment then we wil take from the default.</p>
+<p>See <a href="https://rstudio.github.io/renv/articles/renv.html">renv documentation</a></p>
+</section>
+<section id="data-1" class="level2">
+<h2 class="anchored" data-anchor-id="data-1">Data</h2>
+<p>For Natural_Gas_Futures_Contract_1_Daily.csv bruges siden:</p>
+<ul>
+<li>https://www.eia.gov/opendata/v1/qb.php?category=462457&amp;sdid=NG.RNGC1.D</li>
+</ul>
+<p>For storage</p>
+<ul>
+<li><a href="https://agsi.gie.eu/data-overview/EU">Stoage</a></li>
+</ul>
+<p>For Dutch TTF Natural Gas Futures Historical Data * <a href="https://www.investing.com/commodities/dutch-ttf-gas-c1-futures-historical-data">TTF</a></p>
+<p>For Henry Hub Gas future historia * <a href="https://markets.businessinsider.com/commodities/natural-gas-price">Henry Hub</a></p>
+</section>
+<section id="visual-data" class="level2">
+<h2 class="anchored" data-anchor-id="visual-data">Visual data</h2>
+<section id="by-year" class="level3">
+<h3 class="anchored" data-anchor-id="by-year">By year</h3>
+<div class="cell" data-hash="Capstone_cache/html/unnamed-chunk-2_762e1ee0d3c3eb8b2231bd1706672a74">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ttf_by_date <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year)  <span class="sc">%&gt;%</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value), </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">colour =</span> <span class="st">'#66a182'</span>, </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>year, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">"%b"</span>) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"TTF price developemt by *year*  </span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;span style='font-size:11pt'&gt;Sepal width vs. sepal length for three *Iris*</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="st">    species&lt;/span&gt;"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">""</span>, </span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">""</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"&lt;b&gt;Source&lt;/b&gt;: *investment.com*"</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_markdown</span>(<span class="at">lineheight =</span> <span class="fl">1.1</span>),</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="dv">11</span>),</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text =</span> <span class="fu">element_textbox</span>(</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">8</span>,</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="st">"white"</span>, </span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> <span class="st">"#5D729D"</span>,</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">box.color =</span> <span class="st">"#4A618C"</span>,</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">halign =</span> <span class="fl">0.5</span>, </span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">linetype =</span> <span class="dv">1</span>,</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>      <span class="at">r =</span> <span class="fu">unit</span>(<span class="dv">5</span>, <span class="st">"pt"</span>),</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>      <span class="at">width =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">"npc"</span>),</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">padding =</span> <span class="fu">margin</span>(<span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">margin =</span> <span class="fu">margin</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="Capstone_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="1260"></p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="energi-market" class="level1">
+<h1>Energi Market</h1>
 <section id="spot-market" class="level2">
 <h2 class="anchored" data-anchor-id="spot-market">Spot market</h2>
 <p>The spot market is where financial instruments, such as commodities, currencies, and securities, are traded for immediate delivery. Delivery is the exchange of cash for the financial instrument</p>
@@ -105,25 +402,12 @@ ul.task-list{list-style: none;}
 <h2 class="anchored" data-anchor-id="future-market">Future market</h2>
 <p>A futures contract is a legal agreement to buy or sell a particular commodity asset, or security at a predetermined price at a specified time in the future.</p>
 </section>
-</section>
-<section id="ask" class="level1">
-<h1>Ask</h1>
-<p>Guiding questions</p>
+<section id="litteratur" class="level2">
+<h2 class="anchored" data-anchor-id="litteratur">Litteratur</h2>
 <ul>
-<li>What topic are you exploring?</li>
-<li>What is the problem you are trying to solve?</li>
-<li>What metrics will you use to measure your data to achieve your objective?</li>
-<li>Who are the stakeholders?</li>
-<li>Who is your audience?</li>
-<li>How can your insights help your client make decisions?</li>
+<li><a href="http://home.iitj.ac.in/~parmod/document/introduction%20time%20series.pdf">Time series book</a></li>
 </ul>
-<p>Key tasks</p>
-<ol type="1">
-<li>Identify the business task</li>
-<li>Determine key stakeholders</li>
-<li>Choose a dataset</li>
-<li>Establish metrics</li>
-</ol>
+</section>
 </section>
 
 </main>
